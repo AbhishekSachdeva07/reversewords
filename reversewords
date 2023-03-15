@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char stringg[1000];
+    gets(stringg);
+    //using strtok to divide the entered string into parts
+    char *token = strtok(stringg," ");
+    //using this while loop to spearate all the present words in the string
+    while(token!=NULL){
+        printf("%s ",strrev(token));
+        token=strtok(NULL," ");
+    }
+    
+    return 0;
+}
